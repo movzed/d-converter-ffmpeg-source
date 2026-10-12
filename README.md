@@ -13,14 +13,28 @@ There is one release per FFmpeg build that is shipped. Each release carries the 
 | Platform | FFmpeg build | Release |
 |---|---|---|
 | Windows (x64) | `N-122685-g9bfa1635ae-20260209` | [`windows-N-122685-g9bfa1635ae-20260209`](https://github.com/movzed/d-converter-ffmpeg-source/releases/tag/windows-N-122685-g9bfa1635ae-20260209) |
-| macOS (Apple Silicon) | not built yet | none yet |
+| macOS (Apple silicon) | `N-122685-g9bfa1635ae-dconverter-mac-arm64` | [`macos-N-122685-g9bfa1635ae-20261012`](https://github.com/movzed/d-converter-ffmpeg-source/releases/tag/macos-N-122685-g9bfa1635ae-20261012) |
+
+## Windows (x64)
+
+Release `windows-N-122685-g9bfa1635ae-20260209`: source of the executables `ffmpeg.exe` and `ffprobe.exe` that D-Converter for Windows carries in its installation folder. One source archive per component (the FFmpeg tree and every library built into the executables), the scripts of the build they come from, and beside them `README.md`, `BUILD.md`, `MANIFEST.md`, `MANIFEST.json` and `SHA256SUMS`.
+
+## macOS (Apple silicon)
+
+Release `macos-N-122685-g9bfa1635ae-20261012`: source of the executables `ffmpeg` and `ffprobe`, version `N-122685-g9bfa1635ae-dconverter-mac-arm64`, that D-Converter for macOS carries inside its application bundle. One archive, `dconverter-ffmpeg-mac-arm64-source-9bfa1635ae.tar.gz`: the FFmpeg tree at commit `9bfa1635aef08e777deaeeae15ff9a5ade412188` with no local change, the source archive of every library built into the executables exactly as downloaded, the build script with the patch series applied to it, the build record and the licence files taken from the sources. Beside it: `README.md`, `MANIFEST.md`, `BUILD.md`, `SHA256SUMS`. These executables link neither libdvdread nor libdvdcss.
 
 ## Checking a download
 
-Each release has a `SHA256SUMS` file. After downloading the archives into one folder:
+Each release has a `SHA256SUMS` file. After downloading the files of a release into one folder:
 
 ```
 sha256sum -c SHA256SUMS
+```
+
+On macOS:
+
+```
+shasum -a 256 -c SHA256SUMS
 ```
 
 ## Questions
