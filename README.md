@@ -12,7 +12,7 @@ There is one release per FFmpeg build that is shipped. Each release carries the 
 
 | Platform | FFmpeg build | Release |
 |---|---|---|
-| Windows (x64) | `N-122685-g9bfa1635ae-20260209` | `windows-N-122685-g9bfa1635ae-20260209` (in preparation) |
+| Windows (x64) | `N-122685-g9bfa1635ae-20260209` | [`windows-N-122685-g9bfa1635ae-20260209`](https://github.com/movzed/d-converter-ffmpeg-source/releases/tag/windows-N-122685-g9bfa1635ae-20260209) |
 | macOS (Apple Silicon) | not built yet | none yet |
 
 ## Checking a download
